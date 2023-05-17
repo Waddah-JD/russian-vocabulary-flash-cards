@@ -26,7 +26,7 @@ jobs:
       - name: SSH into Remote Server and Pull Repository
         run: |
           echo "*******************************"
-          echo "Deployment process has starting"
+          echo "Deployment process has STARTED"
           echo "*******************************"
           ssh -i ~/.ssh/id_rsa ${{ secrets.HOST_USERNAME }}@${{ secrets.HOST_IP_ADDRESS }} << EOF
             cd russian-vocabulary-flash-cards/
@@ -42,5 +42,5 @@ jobs:
             echo "TODO ssh into server docker container and run migration up"
           EOF
           echo "****************************"
-          echo "Deployment process has ended"
+          echo "Deployment process has ENDED"
           echo "****************************"

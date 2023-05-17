@@ -1,0 +1,6 @@
+[submodule "russian-vocabulary-flash-cards-server"]
+	path = russian-vocabulary-flash-cards-server
+	url = git@github.com:Waddah-JD/russian-vocabulary-flash-cards-server.git
+[submodule "russian-vocabulary-flash-cards-client"]
+	path = russian-vocabulary-flash-cards-client
+	url = git@github.com:Waddah-JD/russian-vocabulary-flash-cards-client.git

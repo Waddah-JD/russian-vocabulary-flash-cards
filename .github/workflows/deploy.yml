@@ -32,7 +32,7 @@ jobs:
             cd russian-vocabulary-flash-cards/
             echo "TODO run docker-compose down"
             git pull origin master
-            git submodule status
+            git submodule update --recursive --remote
             echo "TODO cd into russian-vocabulary-flash-cards-server"
             echo "TODO inject SERVER environment variables"
             echo "TODO cd into russian-vocabulary-flash-cards-client"

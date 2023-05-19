@@ -9,7 +9,7 @@ Deployment of this repo and its submodules is handled with GitHub workflows, whi
 ```bash
 # Frequently Used Commands
 
-git submodule update --remote
+git submodule update --recursive --remote
 git add .
 git commit -m ""
 git push

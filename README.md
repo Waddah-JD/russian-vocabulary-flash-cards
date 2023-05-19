@@ -2,6 +2,8 @@
 
 the parent repo for orchestration deployment of server and client submodules
 
+Live version: https://vocabulary-flashcards.ru/
+
 ## Deployment
 
 Deployment of this repo and its submodules is handled with GitHub workflows, which is triggered by pushing to `master` (or release a new version on GitHub)

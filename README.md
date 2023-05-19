@@ -14,3 +14,18 @@ git add .
 git commit -m ""
 git push
 ```
+
+### Migration and Seed
+
+if you need to manually trigger migration and seed (instead of through GitHub Workflows), the commands are as follows:
+
+```bash
+docker ps
+docker exec -it <SERVER DOCKER CONTAINER ID> /bin/bash
+
+# inside container
+yarn db:migration:run
+yarn seed
+```
+
+TODO move this ^ into deploy workflows

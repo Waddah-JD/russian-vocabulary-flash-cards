@@ -52,6 +52,7 @@ jobs:
             echo "Creating SERVER .env file ..."
             echo "*****************************"
             cd russian-vocabulary-flash-cards-server/
+            [ -e .env ] && rm .env
             echo "NODE_ENV=${{ env.ENV_SERVER_NODE_ENV }}" >> .env
             echo "PORT=${{ env.ENV_SERVER_PORT }}" >> .env
             echo "TZ=${{ env.ENV_SERVER_TZ }}" >> .env
@@ -70,6 +71,7 @@ jobs:
             echo "*****************************"
             cd ..
             cd russian-vocabulary-flash-cards-client/
+            [ -e .env ] && rm .env
             echo "FIREBASE_API_KEY=${{ secrets.ENV_CLIENT_FIREBASE_API_KEY }}" >> .env
             echo "FIREBASE_AUTH_DOMAIN=${{ secrets.ENV_CLIENT_FIREBASE_AUTH_DOMAIN }}" >> .env
             echo "FIREBASE_PROJECT_ID=${{ secrets.ENV_CLIENT_FIREBASE_PROJECT_ID }}" >> .env

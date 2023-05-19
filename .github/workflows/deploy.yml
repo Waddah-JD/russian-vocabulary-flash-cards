@@ -30,11 +30,24 @@ jobs:
           echo "*******************************"
           ssh -i ~/.ssh/id_rsa ${{ secrets.HOST_USERNAME }}@${{ secrets.HOST_IP_ADDRESS }} << EOF
             cd russian-vocabulary-flash-cards/
-            echo "TODO run docker-compose down"
+            docker-compose down
             git pull origin master
             git submodule update --recursive --remote
+            echo "***************************"
+            echo "Creating MAIN .env file ..."
+            echo "***************************"
+            rm .env
+            echo "POSTGRES_USER=${{ secrets.ENV_MAIN_POSTGRES_USER }}" >> .env
+            echo "POSTGRES_PASSWORD=${{ secrets.ENV_MAIN_POSTGRES_PASSWORD }}" >> .env
+            echo "POSTGRES_DB=${{ secrets.ENV_MAIN_POSTGRES_DB }}" >> .env
+            echo "*****************************"
+            echo "Creating SERVER .env file ..."
+            echo "*****************************"
             echo "TODO cd into russian-vocabulary-flash-cards-server"
             echo "TODO inject SERVER environment variables"
+            echo "*****************************"
+            echo "Creating CLIENT .env file ..."
+            echo "*****************************"
             echo "TODO cd into russian-vocabulary-flash-cards-client"
             echo "TODO inject CLIENT environment variables"
             echo "TODO run docker-compose up --build --detach"

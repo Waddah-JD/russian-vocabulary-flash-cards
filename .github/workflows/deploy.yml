@@ -31,15 +31,15 @@ jobs:
           ssh -i ~/.ssh/id_rsa ${{ secrets.HOST_USERNAME }}@${{ secrets.HOST_IP_ADDRESS }} << EOF
             cd russian-vocabulary-flash-cards/
             echo "TODO run docker-compose down"
-            git submodule sync
-            git submodule foreach git pull origin master
             git pull origin master
+            git submodule status
             echo "TODO cd into russian-vocabulary-flash-cards-server"
             echo "TODO inject SERVER environment variables"
             echo "TODO cd into russian-vocabulary-flash-cards-client"
             echo "TODO inject CLIENT environment variables"
             echo "TODO run docker-compose up --build --detach"
             echo "TODO ssh into server docker container and run migration up"
+            echo "TODO while still in server docker container: run seed (make sure it's idempotent action)"
           EOF
           echo "****************************"
           echo "Deployment process has ENDED"

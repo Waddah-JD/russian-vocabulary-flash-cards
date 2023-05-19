@@ -6,9 +6,11 @@ the parent repo for orchestration deployment of server and client submodules
 
 Deployment of this repo and its submodules is handled with GitHub workflows, which is triggered by pushing to `master` (or release a new version on GitHub)
 
-## Development Mode
-
 ```bash
-# update submodules
-git submodule update --recursive --remote
+# Frequently Used Commands
+
+git submodule update --remote
+git add .
+git commit -m ""
+git push
 ```

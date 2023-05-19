@@ -7,6 +7,14 @@ on:
     branches:
       - master
 
+env:
+  ENV_CLIENT_SERVER_API_ENDPOINT: /api
+  ENV_SERVER_NODE_ENV: production
+  ENV_SERVER_PORT: 3000
+  ENV_SERVER_RATE_LIMITER_LIMIT: 10
+  ENV_SERVER_RATE_LIMITER_TTL: 60
+  ENV_SERVER_TZ: UTC
+
 jobs:
   deploy:
     name: Deploy to remote server

@@ -13,5 +13,19 @@ services:
     volumes:
       - rvfc:/var/lib/postgresql/data
 
+  server:
+    build:
+      context: ./russian-vocabulary-flash-cards-server
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+
+  client:
+    build:
+      context: ./russian-vocabulary-flash-cards-client
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+
 volumes:
   rvfc:

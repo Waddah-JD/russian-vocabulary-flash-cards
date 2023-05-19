@@ -51,7 +51,7 @@ jobs:
             echo "TODO cd into russian-vocabulary-flash-cards-client"
             echo "TODO inject CLIENT environment variables"
             docker-compose up --build --detach
-            echo "TODO ssh into server docker container and run migration up"
+            echo "TODO ssh into server docker container and run 'yarn db:migration:run'"
             echo "TODO while still in server docker container: run seed (make sure it's idempotent action)"
           EOF
           echo "****************************"

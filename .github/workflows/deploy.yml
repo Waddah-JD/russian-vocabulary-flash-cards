@@ -82,13 +82,7 @@ jobs:
             echo "SERVER_API_ENDPOINT=${{ env.ENV_CLIENT_SERVER_API_ENDPOINT }}" >> .env
             docker-compose up --build --detach
             sleep 30s
-            echo "docker ps"
-            echo "${docker ps}"
-            echo "docker ps -aqf"
-            echo "${docker ps -aqf}"
-            echo "docker ps -aqf "name=russian-vocabulary-flash-cards_server""
-            echo "${docker ps -aqf "name=russian-vocabulary-flash-cards_server"}"
-            docker exec -it $(docker ps -aqf "name=russian-vocabulary-flash-cards_server") /bin/bash
+            docker exec -it russian-vocabulary-flash-cards_server_1 /bin/bash
             yarn db:migration:run && exit
           EOF
           echo "****************************"

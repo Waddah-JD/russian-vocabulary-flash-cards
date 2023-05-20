@@ -12,9 +12,7 @@ Deployment of this repo and its submodules is handled with GitHub workflows, whi
 # Frequently Used Commands
 
 git submodule update --recursive --remote
-git add .
-git commit -m ""
-git push
+git add . && git commit -m "" && git push
 ```
 
 ### Migration and Seed

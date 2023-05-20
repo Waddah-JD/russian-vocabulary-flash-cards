@@ -81,7 +81,7 @@ jobs:
             echo "FIREBASE_MEASUREMENT_ID=${{ secrets.ENV_CLIENT_FIREBASE_MEASUREMENT_ID }}" >> .env
             echo "SERVER_API_ENDPOINT=${{ env.ENV_CLIENT_SERVER_API_ENDPOINT }}" >> .env
             docker-compose up --build --detach
-            sleep 30s
+            sleep 60s
             docker exec -it $(docker ps -aqf "name=russian-vocabulary-flash-cards_server") /bin/bash
             yarn db:migration:run && exit
           EOF

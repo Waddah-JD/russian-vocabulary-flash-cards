@@ -8,12 +8,23 @@ Live version: https://vocabulary-flashcards.ru/
 
 Deployment of this repo and its submodules is handled with GitHub Actions, which is triggered by pushing to `master`
 
-```bash
-# Frequently Used Commands
+### Steps (note to self):
 
-git submodule update --recursive --remote
-git add . && git commit -m "" && git push
-```
+- in submodules, take note of changes on `develop` run
+  ```bash
+    git log --abbrev-commit --graph origin/develop..
+  ```
+- merge to master, run
+  ```bash
+  git push && git checkout master && git merge develop && git push && git checkout develop
+  ```
+- in parent repo, update changelog according to new changes (plus other changes if needed for example workflows or docker-compose .. etc)
+- run
+  ```bash
+  git submodule update --recursive --remote
+  git add . && git commit -m "" && git push
+  ```
+- create a new tag and a new release
 
 ### Migration and Seed
 

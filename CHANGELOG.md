@@ -1,3 +1,13 @@
+<a name="1.0.1"></a>
+
+# 1.0.1 (2023-06-01)
+
+## Changes
+
+- fix forward HTTP to HTTPS
+
+---
+
 <a name="1.0.0"></a>
 
 # 1.0.0 (2023-06-01)

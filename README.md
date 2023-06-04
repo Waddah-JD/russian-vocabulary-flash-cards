@@ -43,4 +43,14 @@ yarn seed
 
 ## TODO
 
-- automatically revert (to latest commits) on failed deployment
+- [ ] Blur parts of the details in the `Practice` page, let user click (or hover over) those "hidden" values in order to show them
+- [ ] Allow user to edit their own word notes in `Practice`
+- [ ] Use `ElasticSearch` for faster and more complex search for both `Words` and `English Translations`
+- [ ] Allow users to submit a report for issues they come across while using `Words` or `English Translations` for example: missing or wrong translations, invalid declensions ...etc
+- [ ] Admin Dashboard to view issues reported by users
+- [ ] Word-of-day feature
+- [ ] Social Sign-in
+- [ ] Translations could probably be improved, maybe using Google Translate (check NPM modules: `@google-cloud/translate`, `google-translate-api`)
+- [ ] Allow admin to fix problems (for example: scrapping issues) in-place: open a modal, change JSON, send back?
+- [ ] Automatically revert (to latest commits) on failed deployment
+- [ ] Get rid of the default generic theme styling

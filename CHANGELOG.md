@@ -1,3 +1,18 @@
+<a name="1.1.0"></a>
+
+# 1.1.0 (2023-06-04)
+
+## Changes
+
+- implement generic `FetchedData` component and UI indicators
+- add validators to Email/Password form
+- add Homepage placeholder page
+- persist notes in learn page
+- fix bugs
+- improve style
+
+---
+
 <a name="1.0.1"></a>
 
 # 1.0.1 (2023-06-01)

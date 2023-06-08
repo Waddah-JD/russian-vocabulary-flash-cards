@@ -1,3 +1,15 @@
+<a name="1.2.0"></a>
+
+# 1.2.0 (2023-06-08)
+
+## Changes
+
+- Allow adding word to user's collection in `Words` page
+- Allow updating user's notes in `Words` and `Practice` pages
+- Add `favico`
+
+---
+
 <a name="1.1.0"></a>
 
 # 1.1.0 (2023-06-04)
